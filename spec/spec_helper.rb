@@ -102,7 +102,7 @@ RSpec.configure do |config|
   config.before :all do
     class HttParty
       include HTTParty
-      base_uri 'https://swapi.dev'
+      base_uri 'https://swapi.dev/api'
     end
   end
 end
