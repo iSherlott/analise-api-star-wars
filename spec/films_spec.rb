@@ -13,3 +13,17 @@ RSpec.describe 'Validar se o retorno HTTP é válido para um GET' do
         expect(response.code).to eq(200)
     end
 end
+
+RSpec.describe 'Validar retornos para URLs inválidas.' do 
+    it 'A rota é válida.' do
+        response = HttParty.get('/people/?format=jsonx')
+        expect(response['detail']).to eq('Not found')
+    end
+end
+
+RSpec.describe 'Validar se o filme 10 é válido e qual o tipo de retorno ao consultar' do
+    it 'O filme 10 é válido.' do
+        response = HttParty.get('/films/6?format=json')
+        expect(response.code).to eq(200)
+    end
+end
