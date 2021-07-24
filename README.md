@@ -2,9 +2,9 @@
 
 ## Dependencies
 
-rspec ^3.10.0
-rake ^13.0.6
-httparty ^0.18.1
+rspec ^3.10.0<br />
+rake ^13.0.6<br />
+httparty ^0.18.1<br />
 
 ## Install
 
@@ -17,16 +17,19 @@ id: configurando ambiente
 etapa: Preparando o ambiente de desenvolvimento para aplicar os teste.
 
 id: Test #1 Finalizado
-etapa: Efetuado o teste de mesa da primeira solicitação.
+etapa: Finalizado o teste de mesa da primeira solicitação.
 
 id: Test #2 Finalizado
-etapa: Efetuado o teste de mesa da segunda solicitação, corrigido o endpoint da requisição do test #1, corrigido a comparação de '==' para 'to eq'
+etapa: Finalizado o teste de mesa da segunda solicitação, corrigido o endpoint da requisição do test #1, corrigido a comparação de '==' para 'to eq'
 
 id: Test #3 Finalizado
-etapa: Efetuado o inicio do teste #4, Efetuado o teste de mesa da terceira solicitação.
+etapa: Efetuado o inicio do teste #4, Finalizado o teste de mesa da terceira solicitação.
 
 id: Test #4 Finalizado
-etapa: Criado o diario de bordo do checkpoint do git, trocado o final dos arquivos de '_test' para '_spec'. Efetuado a validação se existe o filme 10, contudo, não consegui retorna o tipo.
+etapa: Criado o diario de bordo do checkpoint do git, trocado o final dos arquivos de '_test' para '_spec'. Finalizado a validação se existe o filme 10, contudo, não consegui retorna o tipo.
+
+id: Test #5 Finalizado
+etapa: Finalizado o teste de mesa da quinta etapa.
 ```
 
 ## Biography

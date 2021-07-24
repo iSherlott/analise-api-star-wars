@@ -18,12 +18,19 @@ RSpec.describe 'Validando a rota de filmes', :type => :request do
 
         it 'O filme 10 é valido' do
             if response.code == 200
-                puts response.code
                 expect(response.code).to eq(200)
             else
-                puts response.code
                 expect(response.code).to_not eq(404)
             end
+        end
+    end
+
+    context 'Validar o nome correto de um determinado episódio de filme', :type => :request do
+        let (:response) {HttParty.get('/films/2?format=json')}
+        title = 'The Empire Strikes Back'
+
+        it 'O nome ' + title + ' está valido' do
+            expect(response['title']).to eq(title)
         end
     end
 end
