@@ -1,5 +1,11 @@
 # Analise Api Star Wars
 
+## Dependencies
+
+rspec ^3.10.0
+rake ^13.0.6
+httparty ^0.18.1
+
 ## Install
 
 Execute o bundler install para instalar todas as dependencias utilizada no projeto.
@@ -18,4 +24,19 @@ etapa: Efetuado o teste de mesa da segunda solicitação, corrigido o endpoint d
 
 id: Test #3 Finalizado
 etapa: Efetuado o inicio do teste #4, Efetuado o teste de mesa da terceira solicitação.
+
+id: Test #4 Finalizado
+etapa: Criado o diario de bordo do checkpoint do git, trocado o final dos arquivos de '_test' para '_spec'. Efetuado a validação se existe o filme 10, contudo, não consegui retorna o tipo.
 ```
+
+## Biography
+
+<a href="https://www.rubydoc.info/gems/rspec-expectations/frames">rspec expectations</a>
+
+<a href="https://www.udemy.com/course/curso-de-testes-ruby-com-rspec">Curso de Testes para Ruby on Rails com RSpec - Udemy</a>
+
+<a href="https://br.sensedia.com/post/rest-api-understand-the-step-by-step-to-perform-tests">rest api understand the step by step to perform tests<a>
+
+<a href="https://relishapp.com/rspec/rspec-core/v/3-8/docs/filtering/conditional-filters">conditional filters - RSpec</a>
+
+<a href="https://www.youtube.com/watch?v=oIN1EIrebVA&ab_channel=ProgramadorShowzim">Introdução ao TDD com Ruby on Rails e Rspec</a>

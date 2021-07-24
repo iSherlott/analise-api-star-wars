@@ -1,29 +1,29 @@
 require 'httparty'
 
-RSpec.describe 'Validar o formato da request (json válido) para a API' do
-    it 'o header deve retornar application/json se a api retorna um json válido.' do
-        response = HttParty.get('/films/?format=json')
-        expect(response.header['content-type']).to eq('application/json')
+RSpec.describe 'Validando a rota de filmes', :type => :request do
+    context 'Verificando seu formato e requisição.' do
+        let (:response) {HttParty.get('/films/?format=json')}
+        
+        it 'o header está em formato json.' do
+            expect(response.header['content-type']).to eq('application/json')
+        end
+        
+        it 'o retorno do HTTP é um GET.' do
+            expect(response.code).to eq(200)
+        end
     end
-end
 
-RSpec.describe 'Validar se o retorno HTTP é válido para um GET' do
-    it 'o retorno do HTTP é um GET.' do
-        response = HttParty.get('/films/?format=json')
-        expect(response.code).to eq(200)
-    end
-end
+    context 'Valida se o filme 10 é válido e qual o tipo de retorno ao consultar', :type => :request do
+        let (:response) {HttParty.get('/films/10?format=json')}
 
-RSpec.describe 'Validar retornos para URLs inválidas.' do 
-    it 'A rota é válida.' do
-        response = HttParty.get('/people/?format=jsonx')
-        expect(response['detail']).to eq('Not found')
-    end
-end
-
-RSpec.describe 'Validar se o filme 10 é válido e qual o tipo de retorno ao consultar' do
-    it 'O filme 10 é válido.' do
-        response = HttParty.get('/films/6?format=json')
-        expect(response.code).to eq(200)
+        it 'O filme 10 é valido' do
+            if response.code == 200
+                puts response.code
+                expect(response.code).to eq(200)
+            else
+                puts response.code
+                expect(response.code).to_not eq(404)
+            end
+        end
     end
 end

@@ -281,34 +281,56 @@ a {
 <div class="results">
 <div id="div_group_1" class="example_group passed">
   <dl style="margin-left: 0px;">
-  <dt id="example_group_1" class="passed">Validar o formato da request (json válido) para a API</dt>
-    <script type="text/javascript">moveProgressBar('25.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">o header deve retornar application/json se a api retorna um json válido.</span><span class='duration'>1.44746s</span></dd>
+  <dt id="example_group_1" class="passed">Validando a rota de filmes</dt>
   </dl>
 </div>
 <div id="div_group_2" class="example_group passed">
-  <dl style="margin-left: 0px;">
-  <dt id="example_group_2" class="passed">Validar se o retorno HTTP é válido para um GET</dt>
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_2" class="passed">Verificando seu formato e requisição.</dt>
+    <script type="text/javascript">moveProgressBar('25.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">o header está em formato json.</span><span class='duration'>1.37319s</span></dd>
     <script type="text/javascript">moveProgressBar('50.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">o retorno do HTTP é um GET.</span><span class='duration'>1.45748s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">o retorno do HTTP é um GET.</span><span class='duration'>1.38935s</span></dd>
   </dl>
 </div>
 <div id="div_group_3" class="example_group passed">
-  <dl style="margin-left: 0px;">
-  <dt id="example_group_3" class="passed">Validar retornos para URLs inválidas.</dt>
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_3" class="passed">Valida se o filme 10 é válido e qual o tipo de retorno ao consultar</dt>
+    <script type="text/javascript">makeRed('rspec-header');</script>
+    <script type="text/javascript">makeRed('div_group_3');</script>
+    <script type="text/javascript">makeRed('example_group_3');</script>
     <script type="text/javascript">moveProgressBar('75.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">a rota é válida.</span><span class='duration'>0.94280s</span></dd>
+    <dd class="example failed">
+      <span class="failed_spec_name">O filme 10 é valido</span>
+      <span class="duration">1.12867s</span>
+      <div class="failure" id="failure_1">
+        <div class="message"><pre>  Failure/Error: expect(response.code).to_not eq(404)
+
+    expected: value != 404
+         got: 404
+
+    (compared using ==)
+  # ./spec/films_spec.rb:25:in `block (3 levels) in &lt;top (required)&gt;&#39;</pre></div>
+        <div class="backtrace"><pre>./spec/films_spec.rb:25:in `block (3 levels) in &lt;top (required)&gt;&#39;</pre></div>
+    <pre class="ruby"><code><span class="linenum">23</span>            else
+<span class="linenum">24</span>                puts response.code
+<span class="offending"><span class="linenum">25</span>                expect(response.code).to_not eq(404)</span>
+<span class="linenum">26</span>            end
+<span class="linenum">27</span>        end
+<span class="linenum">28</span><span class="comment"># Install the coderay gem to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
   </dl>
 </div>
 <div id="div_group_4" class="example_group passed">
   <dl style="margin-left: 0px;">
-  <dt id="example_group_4" class="passed">Validar se o filme 10 é válido e qual o tipo de retorno ao consultar</dt>
+  <dt id="example_group_4" class="passed">Valida retornos para URLs inválidas.</dt>
     <script type="text/javascript">moveProgressBar('100.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">O filme 10 é válido.</span><span class='duration'>0.97645s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">A rota é válida.</span><span class='duration'>0.93120s</span></dd>
   </dl>
 </div>
-<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>4.83353 seconds</strong>";</script>
-<script type="text/javascript">document.getElementById('totals').innerHTML = "4 examples, 0 failures";</script>
+<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>4.95833 seconds</strong>";</script>
+<script type="text/javascript">document.getElementById('totals').innerHTML = "4 examples, 1 failure";</script>
 </div>
 </div>
 </body>
