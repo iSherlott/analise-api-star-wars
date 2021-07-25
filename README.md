@@ -33,6 +33,9 @@ etapa: Finalizado o teste de mesa da quinta etapa.
 
 id: Test #6 Finalizado
 etapa: Finalizado o teste de mesa da sexta etapa.
+
+id: Test #7 Finalizado
+etapa: Finalizado o teste de mesa da setima etapa.
 ```
 
 ## Biography
