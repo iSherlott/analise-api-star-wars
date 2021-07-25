@@ -51,8 +51,8 @@ RSpec.describe 'Validando a rota de filmes', :type => :request do
             expect(response['release_date']).to match(/^\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$/)
         end
         
-        it 'a data está no formato brasileiro' do
-            expect(response['release_date']).to match(/(0?[1-9]|[12][0-9]|3[01])\-(0?[1-9]|1[012])\-\d{4}/)
+        it 'a data não está no formato brasileiro' do
+            expect(response['release_date']).to_not match(/(0?[1-9]|[12][0-9]|3[01])\-(0?[1-9]|1[012])\-\d{4}/)
         end
     end
 end
