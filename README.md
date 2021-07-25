@@ -1,5 +1,35 @@
 # Analise Api Star Wars
 
+<p>A aplicação consiste em escrever testes para alguns cenários conforme descrito
+abaixo, baseado nas APIs do Star Wars, disponível em: https://swapi.dev
+Deverão ser desenvolvidos os cenários para teste das seguintes operações:</p>
+<br />
+
+1. Validar o formato da request (json válido) para a seguinte
+   API: https://swapi.dev/api/films/?format=json
+2. Validar se o retorno HTTP é válido para um GET
+3. Validar retornos para URLs inválidas, como por exemplo:
+   https://swapi.dev/api/people/?format=jsonx
+4. Validar se o filme 10 é válido e qual o tipo de retorno ao consultar;
+5. Validar o nome correto de um determinado episódio de filme;
+6. Validar o ID do episódio e o tipo do dado está correto
+7. Validar o formato de data válida (padrão americano) e validar se a data não é
+   padrão Brasil
+8. Validar o peso e altura do “people” C-3PO e validar pelo menos um filme que
+   ele tenha participado
+
+### Diferenciais:
+
+- Boas práticas na elaboração dos testes
+- Validar outros cenários que identifique necessários para uma API
+  Observações importantes:
+- O projeto deverá ser criado no GitHub. Deverá ser enviado o link para o
+  projeto;
+- O código deve ser enviado por completo, possíveis dependências devem
+  ser explicitadas;
+- O candidato é livre para escolher o framework de sua preferência. O teste,
+  preferencialmente, deve ser escrito em Ruby.
+
 ## Dependencies
 
 rspec ^3.10.0<br />
@@ -20,13 +50,15 @@ id: Test #1 Finalizado
 etapa: Finalizado o teste de mesa da primeira solicitação.
 
 id: Test #2 Finalizado
-etapa: Finalizado o teste de mesa da segunda solicitação, corrigido o endpoint da requisição do test #1, corrigido a comparação de '==' para 'to eq'
+etapa: Finalizado o teste de mesa da segunda solicitação, corrigido o endpoint da requisição do test #1.
+Corrigido a comparação de '==' para 'to eq'
 
 id: Test #3 Finalizado
 etapa: Efetuado o inicio do teste #4, Finalizado o teste de mesa da terceira solicitação.
 
 id: Test #4 Finalizado
-etapa: Criado o diario de bordo do checkpoint do git, trocado o final dos arquivos de '_test' para '_spec'. Finalizado a validação se existe o filme 10, contudo, não consegui retorna o tipo.
+etapa: Criado o diario de bordo do checkpoint do git, trocado o final dos arquivos de '_test' para '_spec'.
+Finalizado a validação se existe o filme 10, contudo, não consegui retorna o tipo.
 
 id: Test #5 Finalizado
 etapa: Finalizado o teste de mesa da quinta etapa.
